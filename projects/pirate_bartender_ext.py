@@ -33,6 +33,7 @@ def ask_drink():
             continue
     return answers
 
+
 def construct_drink(answers):
     drink = []
     for k, v in answers.items():
@@ -44,9 +45,19 @@ def construct_drink(answers):
     return drink
 
 def main_drink():
+    """create drink, print name and composition"""
     answers = ask_drink()
     drink = construct_drink(answers)
-    print("The contents of the pirate drink are:")
+
+    # set the drink name
+    tastes = list(answers) # convert dict keys to list
+    names = ['Chihuahua', 'Rotweiller', 'Labrador', 'Bulldog', 'Waterdog']
+    random_taste = random.sample(tastes, 1)
+    random_name = random.sample(names, 1)
+    drink_name = random_taste[0].title() + " " + random_name[0].title()
+
+    # print the drink details
+    print("The contents of the " + drink_name + " are: " )
     for i in drink:
         print(i)
 
