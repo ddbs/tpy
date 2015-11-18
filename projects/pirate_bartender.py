@@ -49,18 +49,3 @@ if __name__ == "__main__":
     print("The contents of the pirate drink are:")
     for i in drink:
         print(i)
-
-
-"""
-Q1: it is not possible to iterate when dict values are boolean?
-
-# example 1
-preferences = ((k, v) for (k, v) in answers.items() if v = True)
-
-# example 2
-for k, v in answers.items():
-    if True not in v:
-        continue
-    else:
-        print(v)
-"""
